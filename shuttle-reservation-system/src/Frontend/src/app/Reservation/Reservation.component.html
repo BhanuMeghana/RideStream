@@ -1,0 +1,8 @@
+<div>
+    <h2>Reservation List</h2>
+    <ul>
+        <li *ngFor="let reservation of reservations">
+            Shuttle: {{ reservation.shuttle.name }} - User: {{ reservation.user.name }} - Time: {{ reservation.reservationTime }}
+        </li>
+    </ul>
+</div>

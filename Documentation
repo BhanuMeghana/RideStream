@@ -1,0 +1,93 @@
+1.Create a Maven Project
+
+Use your IDE or command line to generate a Maven project.
+Set up the directory structure as described.
+Add Dependencies
+
+Configure pom.xml with necessary dependencies:
+Spring Boot
+MySQL
+Tomcat
+JUnit
+Mockito
+Spring Security
+Other required libraries
+Create Project Structure
+
+Organize directories for source code (src/main/java), resources (src/main/resources), and tests (src/test/java).
+2. Develop the Application
+Define Models
+
+Create Java classes for entities like Shuttle, Reservation, User, etc.
+Implement Repositories
+
+Create interfaces extending JpaRepository for CRUD operations.
+Develop Services
+
+Write service classes for business logic.
+Create Controllers
+
+Implement REST controllers for API endpoints.
+Configure Security
+
+Set up Spring Security for authentication and authorization.
+Add Configuration Files
+
+Configure application properties in application.properties or application.yml.
+3. Testing
+Write Unit Tests
+
+Use JUnit and Mockito to write unit tests for services and controllers.
+Place tests in src/test/java.
+Perform Integration Testing
+
+Write integration tests to verify that various components work together.
+Use Spring Boot’s testing framework.
+Place tests in src/test/java.
+4. Build the Application
+Build the Project
+Use Maven commands:
+mvn clean install to compile and package the application.
+Ensure the WAR file is generated in the target directory.
+5. Prepare for Deployment
+Prepare AWS EC2
+
+Launch an EC2 instance with Amazon Linux 2 or Ubuntu.
+Configure security groups to allow necessary ports (22, 80, 8080).
+Install Required Software
+
+Connect to the EC2 instance via SSH.
+Install Java, MySQL, and Tomcat.
+Transfer and Deploy
+
+Upload the WAR file to the EC2 instance.
+Place the WAR file in Tomcat’s webapps directory.
+Start Tomcat and ensure the application is running.
+6. Continuous Integration/Continuous Deployment (CI/CD)
+Set Up Jenkins
+
+Install Jenkins on a server.
+Create a pipeline job for your project.
+Configure CI/CD Pipeline
+
+Set up build stages using Jenkins pipeline scripts:
+Build the project.
+Deploy the WAR file to AWS EC2.
+Restart Tomcat.
+7. Monitoring and Logging
+Set Up AWS CloudWatch
+
+Create log groups and metrics.
+Install and configure the CloudWatch agent on your EC2 instance to monitor logs.
+Configure AWS CloudTrail
+
+Set up CloudTrail to track API activity and security events.
+8. Running the Application
+Access the Application
+
+Access your application via http://<EC2-public-IP>:8080/<context-path>.
+Verify the application is working as expected.
+Monitor Performance
+
+Use CloudWatch dashboards to monitor application performance.
+Review logs for any errors or issues.
